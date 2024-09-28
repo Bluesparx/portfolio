@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Header from './Header';
+import Footer from './Footer';
 const projects = [
   {
     title: 'Personal Portfolio Website',
@@ -40,7 +41,7 @@ const Projects = () => {
   return (
     <>
     <Header/>
-    <div className="project-div lg:px-40 lg:py-10 sm:px-10">
+    <div className="min-h-screen pt-14 py-9  lg:px-40 lg:py-10 sm:px-10">
       <div className='flex flex-row justify-between pb-2'>
         <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">My Projects</h1>
         <button 
@@ -73,6 +74,7 @@ const Projects = () => {
         ))}
       </div>
     </div>
+    <Footer/>
     </>
   );
 };

@@ -6,7 +6,7 @@ const SocialButton = ({ iconUrl, href }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex lg:ml-3 ml-4 items-center justify-center bg-gray-100 dark:bg-gray-300 dark:bg-opacity-75 rounded-md text-primary-foreground hover:dark:bg-opacity-100 hover:bg-primary/90 h-10 w-10"
+    className="inline-flex items-center justify-center bg-gray-100 dark:bg-gray-300 dark:bg-opacity-75 rounded-md text-primary-foreground hover:dark:bg-opacity-100 hover:bg-primary/90 h-10 w-10"
   >
     <img src={iconUrl} alt="Social icon" className="h-6 w-6" />
   </a>
@@ -23,7 +23,7 @@ const Intro = () => {
         <p className="text-lg mb-6 mx-2 text-gray-700 dark:text-gray-100">
           I'm <span className="font-bold text-red-400">Nazia Hassan</span>, a pre-final year CSE student at IGDTUW with a passion for web development. Currently learning full-stack MERN development, I also dabble in UI/UX design. Let's talk over coffee—about my cat :)
         </p>
-        <div className="flex flex-row gap-3">
+        <div className="social-icons flex flex-row justify-between px-3">
           <SocialButton iconUrl="https://raw.githubusercontent.com/CLorant/readme-social-icons/main/large/dark/github.svg" href="https://github.com/Bluesparx" label="GitHub" />
           <SocialButton iconUrl="https://raw.githubusercontent.com/CLorant/readme-social-icons/main/large/dark/linkedin.svg" href="https://www.linkedin.com/in/naziahassan004" label="LinkedIn" />
           <SocialButton iconUrl="https://raw.githubusercontent.com/CLorant/readme-social-icons/main/large/dark/twitter-x.svg" href="https://x.com/oknaziaa" label="X" />

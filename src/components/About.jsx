@@ -12,13 +12,19 @@ const About = () => {
                     <p className="text-md font-bold text-gray-600 dark:text-gray-200 mb-2 pt-4 pb-2">
                         Tech Stack
                     </p>
-                    <div className="grid grid-cols-3 sm:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-3 gap-3 w-full">
                         {['C++', 'JavaScript', 'React', 'Node.js', 'HTML', 'CSS', 'Python', 'MongoDB', 'Tailwind', 'Numpy', 'Pandas', 'Tensorflow'].map((tech) => (
-                            <div key={tech} className="flex items-center justify-center bg-gray-100 dark:bg-gray-300  rounded-md p-2">
-                                <span className="text-sm font-medium text-gray-800">{tech}</span>
+                            <div 
+                                key={tech} 
+                                className="flex items-center justify-center bg-gray-100 dark:bg-gray-300 rounded-md p-2 min-w-80px max-w-full"
+                            >
+                                <span className="text-sm font-medium text-gray-800 text-center">
+                                    {tech}
+                                </span>
                             </div>
                         ))}
                     </div>
+
                     <p className="text-lg dark:text-gray-200 text-gray-800 pt-6">
                         Beyond coding, I'm an avid reader and a badminton player. I also like to crochet and bake!
                     </p>

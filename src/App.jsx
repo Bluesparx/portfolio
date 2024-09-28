@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import MainContent from './pages/Home';
-
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -21,6 +21,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop/>
       <div className="py-4 sm:py-6 overflow-visible lg:py-8">
         <div className="mainGrid overflow-visible mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <Routes>

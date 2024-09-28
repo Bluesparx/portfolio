@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import swal from 'sweetalert';
 import Header from './Header';
+import Footer from './Footer';
 
 const Contact = () => {
     const navigate = useNavigate();
@@ -44,7 +45,7 @@ const Contact = () => {
     return (
       <>
       <Header/>
-      <div className="lg:px-40 pt-14 sm:px-10">
+      <div className="h-screen flax flex-grow lg:px-40 pt-14 sm:px-10">
 
         <div className='flex flex-row justify-between pb-2'>
           <h1 className="text-3xl font-bold dark:text-gray-100 text-gray-800 mb-6">Contact Me</h1>
@@ -56,7 +57,7 @@ const Contact = () => {
           </button>
         </div>
 
-        <div className='Gcard grid grid-cols-1  lg:grid-cols-2 gap-4 py-10'>
+        <div className='Gcard grid grid-cols-1  gap-4 pt-3'>
           <form 
             className='ctForm flex flex-col w-full col-span-1 lg:col-span-2 rounded-lg p-6 shadow-lg  dark:bg-coffee bg-white' 
             ref={form}  
@@ -105,6 +106,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <Footer/>
       </>
     )
 }

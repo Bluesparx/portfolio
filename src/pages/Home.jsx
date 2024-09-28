@@ -10,6 +10,7 @@ import CuteAnimal from '../components/CuteAnimal';
 import Header from '../components/Header';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Footer from '../components/Footer';
 
 const AnimatedGridItem = ({ children, index, isMobile, className }) => {
   const controls = useAnimation();
@@ -46,9 +47,9 @@ function MainContent({ isMobile }) {
     return (
       <>
         <Header/>
-        <div className="py-4 sm:py-6 overflow-visible lg:py-8">
-        <div className="mainGrid overflow-visible mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div className="grid gap-2 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="pt-14 overflow-visible pb-6 ">
+        <div className="mainGrid mx-auto max-w-2xl lg:max-w-7xl">
+        <div className="grid gap-4 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
 
         <AnimatedGridItem index={0} isMobile={isMobile} className="lg:col-span-3 lg:row-span-1">
           <Intro />
@@ -77,6 +78,7 @@ function MainContent({ isMobile }) {
       </div>
       </div>
       </div>
+      <Footer/>
       </>
     );
   }
