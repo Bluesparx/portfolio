@@ -1,0 +1,26 @@
+#root {
+  width: 100vw;
+  max-height: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: #fee2e2;
+  overflow-x: hidden;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0.5;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Gcard {
+  opacity: 1;
+  transform: translateY(50px);
+  animation: slideIn 0.75s ease-out forwards; 
+}
