@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import emailjs from '@emailjs/browser';
 import swal from 'sweetalert';
+import Header from './Header';
 
 const Contact = () => {
     const navigate = useNavigate();
@@ -41,10 +42,12 @@ const Contact = () => {
     };
 
     return (
-      <div className="lg:px-40 lg:py-12 sm:px-10">
+      <>
+      <Header/>
+      <div className="lg:px-40 pt-14 sm:px-10">
 
         <div className='flex flex-row justify-between pb-2'>
-          <h1 className="text-3xl font-bold text-gray-800 mb-6">Contact Me</h1>
+          <h1 className="text-3xl font-bold dark:text-gray-100 text-gray-800 mb-6">Contact Me</h1>
           <button 
             onClick={() => navigate(-1)} // Navigate back
             className="mb-4 px-4 py-2 border-gray-300 text-gray-800 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
@@ -53,22 +56,22 @@ const Contact = () => {
           </button>
         </div>
 
-        <div className='Gcard grid grid-cols-1 lg:grid-cols-2 gap-4 py-10'>
+        <div className='Gcard grid grid-cols-1  lg:grid-cols-2 gap-4 py-10'>
           <form 
-            className='ctForm flex flex-col w-full col-span-1 lg:col-span-2 rounded-lg p-6 shadow-lg bg-white' 
+            className='ctForm flex flex-col w-full col-span-1 lg:col-span-2 rounded-lg p-6 shadow-lg  dark:bg-coffee bg-white' 
             ref={form}  
             onSubmit={sendEmail}
           >
 
-            <h2 className='text-2xl font-bold text-gray-800 mb-4 text-center'>
+            <h2 className='text-2xl dark:text-gray-100 font-bold text-gray-800 mb-4 text-center'>
               Get in Touch
             </h2>
-            <p className='text-lg text-gray-600 mb-6 text-center'>
-              Feel free to reach out by filling out the form below
+            <p className='text-lg dark:text-gray-200 text-gray-600 mb-6 text-center'>
+              Feel free to reach out
             </p>
 
             <input 
-              className='py-2 mb-3 txt bg-gray-200 rounded-lg px-3' 
+              className='py-2 mb-3 txt dark:bg-gray-300 bg-gray-200 rounded-lg px-3' 
               type='text' 
               name='from_name' 
               value={formData.from_name} 
@@ -76,7 +79,7 @@ const Contact = () => {
               placeholder='Your Name'
             />
             <input 
-              className='py-2 mb-3 email bg-gray-200 rounded-lg px-3' 
+              className='py-2 mb-3 email dark:bg-gray-300  bg-gray-200 rounded-lg px-3' 
               type='email'  
               name='from_email' 
               value={formData.from_email} 
@@ -84,7 +87,7 @@ const Contact = () => {
               placeholder='Your Email'
             />
             <textarea 
-              className='py-2 mb-3 msg bg-gray-200 rounded-lg px-3' 
+              className='py-2 mb-3 msg dark:bg-gray-300 bg-gray-200 rounded-lg px-3' 
               name='message' 
               rows="5" 
               value={formData.message} 
@@ -93,7 +96,7 @@ const Contact = () => {
             />
             
             <button 
-              className='py-2 bg-violet-100 text-gray-700 rounded-lg px-3 hover:bg-red-200' 
+              className='py-2 bg-violet-100 dark:bg-violet-200 text-gray-700 rounded-lg px-3 hover:bg-red-200' 
               type='submit' 
               value="Send"
             >
@@ -102,6 +105,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      </>
     )
 }
 

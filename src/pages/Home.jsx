@@ -7,6 +7,7 @@ import ContactGrid from '../components/ContactGrid';
 import ProjectGrid from '../components/ProjectGrid';
 import Resume from '../components/Resume';
 import CuteAnimal from '../components/CuteAnimal';
+import Header from '../components/Header';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -43,10 +44,13 @@ const AnimatedGridItem = ({ children, index, isMobile, className }) => {
 
 function MainContent({ isMobile }) {
     return (
+      <>
+        <Header/>
         <div className="py-4 sm:py-6 overflow-visible lg:py-8">
         <div className="mainGrid overflow-visible mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          <div className="grid gap-2 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <AnimatedGridItem index={0} isMobile={isMobile} className="lg:col-span-3 lg:row-span-1">
+        <div className="grid gap-2 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
+
+        <AnimatedGridItem index={0} isMobile={isMobile} className="lg:col-span-3 lg:row-span-1">
           <Intro />
         </AnimatedGridItem>
         <AnimatedGridItem index={1} isMobile={isMobile} className="lg:col-span-1 lg:row-span-3">
@@ -73,6 +77,7 @@ function MainContent({ isMobile }) {
       </div>
       </div>
       </div>
+      </>
     );
   }
   export default MainContent;
