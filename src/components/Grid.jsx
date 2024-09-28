@@ -4,17 +4,18 @@ import { Link } from 'react-router-dom';
 import CuteAnimal from './CuteAnimal';
 
 
-const SocialButton = ({ iconUrl, href, label }) => (
+const SocialButton = ({ iconUrl, href }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+    className="inline-flex lg:ml-3 ml-1 items-center justify-center bg-gray-100 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 h-10 w-10"
   >
-    <img src={iconUrl} alt={label} className="mr-2 h-7 w-7 bg-gray-200 rounded p-1" />
-    {/* {label} */}
+    <img src={iconUrl} alt="Social icon" className="h-6 w-6" />
   </a>
 );
+
+
 
 
 function CardGrid() {
@@ -54,7 +55,7 @@ function CardGrid() {
             setTemperature(data.main.temp);
             setWeather(data.weather[0].description);
             const iconCode = data.weather[0].icon;
-            const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // Create the icon URL
+            const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; 
             setIcon(iconUrl);
           } else {
             setTemperature('No data found');
@@ -70,17 +71,17 @@ function CardGrid() {
 
 
   return (
-    <div className="py-4 sm:py-6 lg:py-8">
-      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div className="py-4 sm:py-6 overflow-visible lg:py-8">
+      <div className="mainGrid overflow-visible mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="grid gap-2 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
 
           {/* Intro */}
-          <div  className="Gcard drop-shadow-md md:col-span-3 relative flex items-center text-start rounded-lg bg-white p-6 shadow">
+          <div  className="Gcard drop-shadow-md md:col-span-3 relative flex items-center text-start rounded-lg bg-white p-6 sm:p-4shadow px-1">
             <div className="flex flex-col">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-800 mb-4">
+              <h2 className="text-2xl font-bold tracking-tight text-gray-800 mb-4 mx-2">
                 Hi there!
               </h2>
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-gray-700 mb-6 mx-2">
                 I'm <span className="font-bold text-red-400">Nazia Hassan</span>, a pre-final year CSE student at IGDTUW with a passion for web development. Currently learning full-stack MERN development, I also dabble in UI/UX design. Let's talk over coffee—about my cat :)
               </p>
               <div className="flex flex-row gap-3">
@@ -103,7 +104,7 @@ function CardGrid() {
               <p className="text-md font-bold text-gray-500 mb-2 pt-4">
                 Tech Stack
               </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 sm:grid-cols-3 gap-4">
                 {['C++','JavaScript', 'React', 'Node.js', 'HTML', 'CSS', 'Python', 'MongoDB', 'Tailwind', 'Numpy', 'Pandas', 'Tensorflow'].map((tech) => (
                   <div key={tech} className="flex items-center justify-center bg-gray-100 rounded-md p-2">
                     <span className="text-sm font-medium text-gray-800">{tech}</span>
@@ -189,12 +190,9 @@ function CardGrid() {
             </div>
           </div>
 
-          <div className="Gcard drop-shadow-md relative flex  text-start rounded-lg bg-white p-6 shadow">
+          <div className="Gcard drop-shadow-md relative flex text-start rounded-lg bg-white p-6 shadow">
           <CuteAnimal/>
           </div>
-
-
-
         </div>
       </div>
     </div>
