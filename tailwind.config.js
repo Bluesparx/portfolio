@@ -12,6 +12,7 @@ export default {
         'light-bg': '#f1d7de',
         'light-about':'#edabab',
         'dark-about': '#857a7a',
+        'customPink': '#eddde3',
       },
     },
   },
