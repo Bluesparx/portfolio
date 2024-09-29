@@ -97,7 +97,7 @@ const Contact = () => {
             />
             
             <button 
-              className='py-2 bg-violet-100 dark:bg-violet-200 dark:bg-opacity-80 text-gray-700 rounded-lg px-3 hover:bg-red-200' 
+              className='py-2 bg-violet-100 dark:bg-violet-200 dark:bg-opacity-80 text-gray-700 rounded-lg px-3 dark:hover:bg-opacity-60 hover:bg-opacity-80' 
               type='submit' 
               value="Send"
             >
