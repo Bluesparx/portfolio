@@ -62,9 +62,9 @@ const Today = () =>{
               <p className="text-sm font-bold dark:text-red-300 text-gray-600 pb-2">New Delhi</p>
               
                 <p className="text-md  text-gray-900 dark:text-gray-100 pb-2">Temperature: {temperature}°C</p>
-                <div className='flex flex-row  bg-gray-100 dark:bg-dark-about items-center'>
+                <div className='flex flex-row rounded bg-coffee bg-opacity-30 dark:bg-dark-about items-center '>
                   {icon && <img style={{ width: '50px', height: '50px' }} src={icon} alt="Weather icon" />} 
-                  <p className="text-md text-justify dark:text-gray-200 text-gray-900">{weather}</p>
+                  <p className="text-md text-justify dark:text-gray-200 text-gray-900 px-2">{weather}</p>
                 </div>
               
             </div>

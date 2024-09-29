@@ -72,7 +72,7 @@ const Contact = () => {
             </p>
 
             <input 
-              className='py-2 mb-3 txt dark:bg-gray-300 bg-gray-200 rounded-lg px-3' 
+              className='py-2 mb-3 txt dark:bg-gray-300 text-gray-800 bg-gray-200 rounded-lg px-3' 
               type='text' 
               name='from_name' 
               value={formData.from_name} 
@@ -80,7 +80,7 @@ const Contact = () => {
               placeholder='Your Name'
             />
             <input 
-              className='py-2 mb-3 email dark:bg-gray-300  bg-gray-200 rounded-lg px-3' 
+              className='py-2 mb-3 email dark:bg-gray-300 text-gray-800  bg-gray-200 rounded-lg px-3' 
               type='email'  
               name='from_email' 
               value={formData.from_email} 
@@ -88,7 +88,7 @@ const Contact = () => {
               placeholder='Your Email'
             />
             <textarea 
-              className='py-2 mb-3 msg dark:bg-gray-300 bg-gray-200 rounded-lg px-3' 
+              className='py-2 mb-3 msg dark:bg-gray-300 text-gray-800  bg-gray-200 rounded-lg px-3' 
               name='message' 
               rows="5" 
               value={formData.message} 
@@ -97,7 +97,7 @@ const Contact = () => {
             />
             
             <button 
-              className='py-2 bg-violet-100 dark:bg-violet-200 text-gray-700 rounded-lg px-3 hover:bg-red-200' 
+              className='py-2 bg-violet-100 dark:bg-violet-200 dark:bg-opacity-80 text-gray-700 rounded-lg px-3 hover:bg-red-200' 
               type='submit' 
               value="Send"
             >
