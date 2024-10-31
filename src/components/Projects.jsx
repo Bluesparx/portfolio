@@ -4,6 +4,18 @@ import Header from './Header';
 import Footer from './Footer';
 const projects = [
   {
+    title: 'Pinsights',
+    tech: 'Pinterest API',
+    repo: 'https://pinsights.vercel.app',
+    description: 'An app that reviews your Pinterest saves and boards, providing a fun, summarized review of your collections.',
+  },
+  {
+    title: 'ZenZone',
+    tech: 'MERN',
+    repo: 'https://zen-zone-raga.vercel.app',
+    description: 'A mental health app that helps users track sleep and mood patterns over time, with insights, calendar UI, and suggestions for wellness.',
+  },
+  {
     title: 'Personal Portfolio Website',
     tech: 'MERN',
     repo: 'url',
