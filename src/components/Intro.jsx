@@ -21,7 +21,7 @@ const Intro = () => {
           Hi there!
         </h2>
         <p className="text-lg mb-6 mx-2 text-gray-700 dark:text-gray-100">
-          I'm <a href='https://www.linkedin.com/in/naziahassan004' className="font-bold text-red-400">Nazia Hassan</a>, a pre-final year CSE student at IGDTUW with a passion for web development. Currently learning full-stack MERN development, I also dabble in UI/UX design. Let's talk over coffee—about my cat :)
+          I'm <a href='https://www.linkedin.com/in/naziahassan004' className="font-bold text-red-400">Nazia Hassan</a>, a pre-final year CSE student at IGDTUW with a passion for web development. Currently learning full-stack development with a focus on backend, and also a bit of machine learning and cryptography. Let's talk over coffee—about my cat :)
         </p>
         <div className="social-icons flex flex-row justify-between px-3">
           <SocialButton iconUrl="https://raw.githubusercontent.com/CLorant/readme-social-icons/main/large/dark/github.svg" href="https://github.com/Bluesparx" label="GitHub" />
